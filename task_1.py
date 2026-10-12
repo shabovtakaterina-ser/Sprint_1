@@ -9,39 +9,30 @@ for part in parts:
 
     for unit in units:
         if 'h' in unit:
-            # Удаляем символ h.
             hours_string = unit.replace('h', '')
 
-            # Преобразуем строку в целое число.
             hours = int(hours_string)
 
-            # Переводим часы в минуты.
             hours_in_minutes = hours * 60
 
-            # Добавляем полученные минуты к общей сумме.
             minutes = minutes + hours_in_minutes
 
         elif 'm' in unit:
-            # Удаляем символ m.
+           
             minutes_string = unit.replace('m', '')
 
-            # Преобразуем строку в целое число.
             current_minutes = int(minutes_string)
 
-            # Добавляем минуты к общей сумме.
             minutes = minutes + current_minutes
 
         elif 's' in unit:
-            # Удаляем символ s.
+
             seconds_string = unit.replace('s', '')
 
-            # Преобразуем строку в целое число.
             seconds = int(seconds_string)
 
-            # Переводим секунды в минуты.
             seconds_in_minutes = seconds // 60
 
-            # Добавляем полученные минуты к общей сумме.
             minutes = minutes + seconds_in_minutes
 
 print(minutes)
